@@ -18,7 +18,7 @@ public class PaymentController {
 
 
     @PostMapping
-    public String createPaymentLink(@RequestBody CreatePaymentLinkRequestDto requestDto){
+    public String createPaymentLink(@RequestBody CreatePaymentLinkRequestDto requestDto) throws Exception {
         return paymentService.createPaymentLink(requestDto.getOrderID());
     }
 }
